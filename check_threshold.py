@@ -11,7 +11,7 @@ print("Run ID:", run_id)
 print("Accuracy:", accuracy)
 
 if accuracy < 0.85:
-    print("❌ Accuracy below threshold")
+    print("Accuracy below threshold")
     sys.exit(1)
 else:
-    print("✅ Accuracy OK")
+    print("Accuracy OK")
