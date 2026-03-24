@@ -7,9 +7,12 @@ with open("model_info.txt", "r") as f:
 client = mlflow.tracking.MlflowClient()
 run = client.get_run(run_id)
 
-accuracy = run.data.metrics.get("accuracy", 0)
+print("Run ID:", run_id)
+print("All metrics:", run.data.metrics)
 
-print(f"Accuracy: {accuracy}")
+accuracy = run.data.metrics["accuracy"]
+
+print("Accuracy:", accuracy)
 
 if accuracy < 0.85:
     print("❌ Accuracy below threshold")
