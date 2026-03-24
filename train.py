@@ -15,7 +15,7 @@ x_test = x_test.reshape(len(x_test), -1) / 255.0
 with mlflow.start_run() as run:
 
     model = LogisticRegression(max_iter=200)
-    model.fit(x_train[:100000], y_train[:100000])  # small subset (fast)
+    model.fit(x_train[:5000], y_train[:5000])  # small subset (fast)
 
     preds = model.predict(x_test[:2000])
     accuracy = accuracy_score(y_test[:2000], preds)
