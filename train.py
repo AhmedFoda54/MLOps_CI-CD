@@ -1,6 +1,6 @@
 import mlflow
 import numpy as np
-import pandas as pd
+import pandas as pdf
 from tensorflow.keras.datasets import mnist
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
